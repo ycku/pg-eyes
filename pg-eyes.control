@@ -1,0 +1,4 @@
+# pg-eyes extension
+comment = 'pg-eyes 天眼通 by postgresql.tw'
+default_version = '0.0.1'
+relocatable = true
