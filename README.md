@@ -16,6 +16,7 @@ $ psql
 - 開始在 psql 中操作
 ```
 postgres=# CREATE SCHEMA pgeyes;
+postgres=# REVOKE ALL ON SCHEMA pgeyes FROM PUBLIC;
 postgres=# CREATE EXTENSION pgeyes WITH SCHEMA pgeyes;
 postgres=# SELECT pgeyes.pgeyes();
 ```
