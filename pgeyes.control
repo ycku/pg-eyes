@@ -1,0 +1,4 @@
+# pgeyes extension
+comment = 'pgeyes 天眼通 by postgresql.tw'
+default_version = '0.0.1'
+relocatable = true
