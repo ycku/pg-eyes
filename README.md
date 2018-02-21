@@ -18,13 +18,20 @@ $ psql
 postgres=# CREATE SCHEMA pgeyes;
 postgres=# REVOKE ALL ON SCHEMA pgeyes FROM PUBLIC;
 postgres=# CREATE EXTENSION pgeyes WITH SCHEMA pgeyes;
-postgres=# SELECT pgeyes.pgeyes();
+postgres=# SELECT * FROM pgeyes.pgeyes();
 ```
 
 - 應該會出現這樣的結果，表示安裝成功。
 ```
- pgeyes
---------
- t
+           item            | result | valid | description
+---------------------------+--------+-------+-------------
+ PostgreSQL version number | 90607  | t     | >=90600
 (1 row)
+```
+
+## 更新 Update
+- 目前不提供 Extension update 的方法，請 DROP 再 CREATE 即可。
+```
+postgres=# DROP EXTENSION pgeyes;
+postgres=# CREATE EXTENSION pgeyes WITH SCHEMA pgeyes;
 ```
