@@ -1,0 +1,9 @@
+CREATE TABLE foreign_db(
+  name VARCHAR NOT NULL PRIMARY KEY,
+  host VARCHAR NOT NULL,
+  port VARCHAR NOT NULL,
+  dbname VARCHAR NOT NULL,
+  username VARCHAR NOT NULL,
+  password VARCHAR NOT NULL,
+  local_schema VARCHAR NOT NULL UNIQUE
+);
