@@ -1,4 +1,5 @@
 # pgeyes extension
+encoding = 'utf-8'
 comment = 'pgeyes 天眼通 by postgresql.tw'
 default_version = '0.0.2'
 relocatable = true
