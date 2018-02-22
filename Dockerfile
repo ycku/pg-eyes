@@ -12,4 +12,6 @@ RUN set -ex && apk add --no-cache --virtual .fetch-deps \
                        openrc
                    
 EXPOSE 5432
+
+USER postgres
 CMD ["postgres"]
