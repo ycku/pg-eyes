@@ -14,4 +14,8 @@ RUN set -ex && apk add --no-cache --virtual .fetch-deps \
 	     
 EXPOSE 5432
 
-CMD ["sh"]
+COPY docker-entrypoint.sh /
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["postgres"]
