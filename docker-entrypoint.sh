@@ -1,2 +1,2 @@
 #!/bin/sh
-rc-service postgresql restart
+exec gosu postgres "$@"
