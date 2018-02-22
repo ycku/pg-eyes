@@ -11,7 +11,6 @@ RUN set -ex && apk add --no-cache --virtual .fetch-deps \
                        git \
                        openrc \
              && rm -rf /var/cache/apk/*
-RUN rc-service postgresql start 
 	     
 EXPOSE 5432
 
