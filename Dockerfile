@@ -10,7 +10,10 @@ RUN set -ex && apk add --no-cache --virtual .fetch-deps \
                        make \
                        git \
                        openrc
-                   
+             && touch /run/openrc/softlevel \
+	     && rc-service postgresql start \
+	     && rm -rf /var/cache/apk/*
+	     
 EXPOSE 5432
 
 CMD ["sh"]
