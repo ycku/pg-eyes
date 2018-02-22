@@ -15,8 +15,13 @@ RUN set -ex && apk add --no-cache --virtual .fetch-deps \
 	     && touch /run/openrc/softlevel \
 	     && rc-service postgresql start
 	     
+RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
+
+ENV PGDATA /var/lib/postgresql/10
+RUN chmod 777 "$PGDATA"
+VOLUME /var/lib/postgresql/10
+
 EXPOSE 5432
-VOLUME /var/lib/postgresql/data
 
 COPY docker-entrypoint.sh /
 RUN chmod a+x docker-entrypoint.sh
