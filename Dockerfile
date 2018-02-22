@@ -16,6 +16,7 @@ RUN set -ex && apk add --no-cache --virtual .fetch-deps \
 	     && rc-service postgresql start
 	     
 EXPOSE 5432
+VOLUME /var/lib/postgresql/data
 
 COPY docker-entrypoint.sh /
 RUN chmod a+x docker-entrypoint.sh
