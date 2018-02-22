@@ -13,5 +13,4 @@ RUN set -ex && apk add --no-cache --virtual .fetch-deps \
                    
 EXPOSE 5432
 
-USER postgres
-CMD ["postgres"]
+CMD ["sh"]
