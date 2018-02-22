@@ -9,10 +9,10 @@ RUN set -ex && apk add --no-cache --virtual .fetch-deps \
                        postgresql-dev \
                        make \
                        git \
-                       openrc
+                       openrc \
+             && rm -rf /var/cache/apk/* \
              && touch /run/openrc/softlevel \
-	     && rc-service postgresql start \
-	     && rm -rf /var/cache/apk/*
+	     && rc-service postgresql start 
 	     
 EXPOSE 5432
 
